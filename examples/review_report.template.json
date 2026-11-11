@@ -1,0 +1,12 @@
+{
+  "opened_in_blender": false,
+  "geometry_ok": false,
+  "materials_ok": false,
+  "scale_and_origin_ok": false,
+  "capabilities": {
+    "needs_collision": false,
+    "needs_wind": false,
+    "needs_usable_interior": false
+  },
+  "comment": "Example only. Open and inspect the actual GLB in Blender, then update the booleans based on real checks."
+}

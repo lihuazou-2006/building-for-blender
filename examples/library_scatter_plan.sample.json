@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.8",
+  "comment": "Example only. Update asset_id, mesh surface and zone bounds to your actual .blend before compiling.",
+  "jobs": [
+    {
+      "asset_id": "rock_near_water",
+      "surface_object": "SB_terrain",
+      "bounds_xy": [-18, 18, 2, 9],
+      "count": 20,
+      "seed": 2408,
+      "scale_range": [0.75, 1.35]
+    }
+  ]
+}

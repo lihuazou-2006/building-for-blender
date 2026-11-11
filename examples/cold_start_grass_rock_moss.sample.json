@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.8",
+  "scene_name": "岩石-草丛-苔藓材质素材库冷启动示例（非照片自动识别结果）",
+  "elements": [
+    {"asset_id":"rock_near_water","asset_key":"shore_rock","name":"海岸岩石基础模型","kind":"repeated_asset","category":"rock","observed":["需要岸边可散布岩石"],"inferred":[],"tripo_candidate":true,"instances_estimated":40,"views":["main"]},
+    {"asset_id":"coastal_grass_clump","asset_key":"coastal_grass_clump","name":"海岸草丛基础模型","kind":"repeated_asset","category":"vegetation","observed":["需要草丛团块"],"inferred":[],"tripo_candidate":true,"instances_estimated":250,"views":["main"]},
+    {"asset_id":"moss_surface","name":"岩石表面苔藓","kind":"continuous_environment","category":"vegetation","material_key":"coastal_moss","observed":["需要表面苔藓覆盖"],"inferred":[],"tripo_candidate":false}
+  ]
+}

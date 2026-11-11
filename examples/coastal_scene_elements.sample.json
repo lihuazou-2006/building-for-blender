@@ -1,0 +1,509 @@
+{
+  "schema_version": "0.7",
+  "scene_name": "海湾村落参考图元素清单（示例，AI需复核）",
+  "analysis_source": "agent_visual_estimate_from_user_photo",
+  "coordinate_system": "bbox_norm [x0,y0,x1,y1] normalized to the full source image",
+  "uncertainties": [
+    "单张图片无法准确恢复被遮挡的立面、楼层内部和船底",
+    "右侧建筑可能包含更多独立单元，当前归组为可复用基础屋型",
+    "无法凭单张图准确判断所有远景船只、车辆和岩石的数量"
+  ],
+  "elements": [
+    {
+      "asset_id": "yellow_coastal_house",
+      "name": "左侧黄色阳台建筑",
+      "kind": "independent_asset",
+      "category": "building",
+      "bbox_norm": [
+        0.0,
+        0.1,
+        0.192,
+        0.555
+      ],
+      "observed": [
+        "黄色外墙",
+        "红色瓦屋顶",
+        "多层阳台",
+        "深色栏杆",
+        "室外楼梯和白色围栏"
+      ],
+      "inferred": [
+        "背面与内部结构照片不可见，需要按外观合理补全"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side",
+        "back"
+      ],
+      "instances_estimated": 1,
+      "priority": "high"
+    },
+    {
+      "asset_id": "white_house_left",
+      "name": "左中白色红顶建筑",
+      "kind": "independent_asset",
+      "category": "building",
+      "bbox_norm": [
+        0.16,
+        0.282,
+        0.316,
+        0.493
+      ],
+      "observed": [
+        "白色墙体",
+        "红瓦斜屋顶",
+        "多层窗洞",
+        "紧贴左侧建筑群"
+      ],
+      "inferred": [
+        "背面和屋顶被部分遮挡"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "white_house_center",
+      "name": "海湾中央白墙红瓦建筑",
+      "kind": "independent_asset",
+      "category": "building",
+      "bbox_norm": [
+        0.515,
+        0.333,
+        0.705,
+        0.487
+      ],
+      "observed": [
+        "白墙",
+        "红瓦斜屋顶",
+        "阳台",
+        "蓝色窗门"
+      ],
+      "inferred": [
+        "其他建筑遮挡部分需要谨慎补全"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side"
+      ],
+      "instances_estimated": 1,
+      "priority": "high"
+    },
+    {
+      "asset_id": "white_house_right",
+      "name": "海湾右侧白色村屋",
+      "kind": "repeated_asset",
+      "category": "building",
+      "bbox_norm": [
+        0.69,
+        0.328,
+        0.99,
+        0.497
+      ],
+      "observed": [
+        "白墙红瓦",
+        "数栋相连或相近的村屋",
+        "临海露台"
+      ],
+      "inferred": [
+        "无法从单图确定每栋独立房屋的真实边界；以可复用基础屋型作为变体"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side"
+      ],
+      "instances_estimated": 4,
+      "priority": "high"
+    },
+    {
+      "asset_id": "small_harbor_house",
+      "name": "港口入口白色小屋",
+      "kind": "independent_asset",
+      "category": "building",
+      "bbox_norm": [
+        0.474,
+        0.428,
+        0.541,
+        0.505
+      ],
+      "observed": [
+        "小体量白色建筑",
+        "红色斜屋顶",
+        "靠近港口水面"
+      ],
+      "inferred": [
+        "建筑背侧未知"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "low"
+    },
+    {
+      "asset_id": "boat_foreground",
+      "name": "近景白色木质渔船",
+      "kind": "independent_asset",
+      "category": "boat",
+      "bbox_norm": [
+        0.559,
+        0.752,
+        0.823,
+        0.896
+      ],
+      "observed": [
+        "细长小木船",
+        "白色外缘配红色条纹",
+        "木质内舱和座板",
+        "系泊在水面"
+      ],
+      "inferred": [
+        "水下船底轮廓不可见，合理补齐"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side"
+      ],
+      "instances_estimated": 1,
+      "priority": "high"
+    },
+    {
+      "asset_id": "boat_beach",
+      "name": "沙滩搁置小渔船",
+      "kind": "repeated_asset",
+      "category": "boat",
+      "bbox_norm": [
+        0.211,
+        0.535,
+        0.501,
+        0.677
+      ],
+      "observed": [
+        "多艘白色或红色浅底小船",
+        "部分搁置于沙滩",
+        "船头船尾较窄"
+      ],
+      "inferred": [
+        "选代表性船型做基础模型，不将所有船粘在一个模型中"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 6,
+      "priority": "high"
+    },
+    {
+      "asset_id": "boat_right_red",
+      "name": "右侧红色渔船",
+      "kind": "independent_asset",
+      "category": "boat",
+      "bbox_norm": [
+        0.802,
+        0.498,
+        0.923,
+        0.568
+      ],
+      "observed": [
+        "红色小船",
+        "位于右侧港湾",
+        "较低船舷"
+      ],
+      "inferred": [
+        "后侧与船底遮挡"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "boat_right_white",
+      "name": "右侧远景白色船",
+      "kind": "independent_asset",
+      "category": "boat",
+      "bbox_norm": [
+        0.763,
+        0.583,
+        0.955,
+        0.659
+      ],
+      "observed": [
+        "白色船体",
+        "蓝色座位",
+        "飘浮在右侧水面"
+      ],
+      "inferred": [
+        "仅部分结构可见"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "coastal_pine",
+      "name": "山坡海岸松树",
+      "kind": "repeated_asset",
+      "category": "vegetation",
+      "bbox_norm": [
+        0.74,
+        0.225,
+        0.939,
+        0.382
+      ],
+      "observed": [
+        "不规则伞状或偏平树冠",
+        "深绿叶团",
+        "树枝向海风方向舒展"
+      ],
+      "inferred": [
+        "树干下部被山坡遮挡"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main",
+        "side"
+      ],
+      "instances_estimated": 6,
+      "priority": "high"
+    },
+    {
+      "asset_id": "coastal_bush",
+      "name": "海岸灌木",
+      "kind": "repeated_asset",
+      "category": "vegetation",
+      "bbox_norm": [
+        0.684,
+        0.406,
+        0.98,
+        0.508
+      ],
+      "observed": [
+        "建筑前和山坡有深绿灌木",
+        "不规则成簇叶团"
+      ],
+      "inferred": [
+        "根部被挡住，需要自然补全"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 20,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "seawall_rock",
+      "name": "海湾护岸石块",
+      "kind": "repeated_asset",
+      "category": "rock",
+      "bbox_norm": [
+        0.691,
+        0.485,
+        0.89,
+        0.546
+      ],
+      "observed": [
+        "灰白色不规则岩石堆砌在水边",
+        "颗粒大小不同"
+      ],
+      "inferred": [
+        "可使用少量岩石变体重复散布"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 30,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "motorcycle",
+      "name": "黄色建筑下方摩托车",
+      "kind": "independent_asset",
+      "category": "vehicle",
+      "bbox_norm": [
+        0.16,
+        0.5,
+        0.251,
+        0.55
+      ],
+      "observed": [
+        "小型摩托车",
+        "深红及黑色车身",
+        "停靠在道路旁"
+      ],
+      "inferred": [
+        "远景细节有限，避免虚构特定品牌或型号"
+      ],
+      "tripo_candidate": true,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "low"
+    },
+    {
+      "asset_id": "power_pole",
+      "name": "海边电线杆",
+      "kind": "repeated_asset",
+      "category": "structure",
+      "bbox_norm": [
+        0.265,
+        0.278,
+        0.305,
+        0.492
+      ],
+      "observed": [
+        "细长竖杆",
+        "上方连接多条电线"
+      ],
+      "inferred": [
+        "杆背面不明",
+        "电线可以在 Blender 里用 Curve 生成"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 3,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "wire_lines",
+      "name": "跨海湾电线",
+      "kind": "continuous_environment",
+      "category": "structure",
+      "bbox_norm": null,
+      "observed": [
+        "黑色电线斜跨画面",
+        "连接多个电线杆"
+      ],
+      "inferred": [
+        "由 Curve 生成，非独立 Tripo 对象"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "curved_beach",
+      "name": "弧形沙滩",
+      "kind": "continuous_environment",
+      "category": "other",
+      "bbox_norm": null,
+      "observed": [
+        "细碎浅黄沙滩沿海湾弯曲",
+        "有高低起伏和船只搁置区域"
+      ],
+      "inferred": [
+        "地形由程序化网格和 Shader 构建"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "sea_water",
+      "name": "海湾海水",
+      "kind": "continuous_environment",
+      "category": "other",
+      "bbox_norm": null,
+      "observed": [
+        "深蓝至青绿色水体",
+        "近岸水下可见部分岩石",
+        "细密波纹"
+      ],
+      "inferred": [
+        "使用水面 Mesh 和 Shader",
+        "不生成完整独立 Tripo 模型"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "hillside",
+      "name": "右后方山坡与岩石",
+      "kind": "continuous_environment",
+      "category": "other",
+      "bbox_norm": null,
+      "observed": [
+        "右后方有岩石山坡和树木",
+        "坡顶起伏明显"
+      ],
+      "inferred": [
+        "程序化地形与局部岩石实例组合"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "stone_walkway",
+      "name": "左侧石板步道",
+      "kind": "continuous_environment",
+      "category": "other",
+      "bbox_norm": null,
+      "observed": [
+        "左下角石板路",
+        "白色堤岸矮墙"
+      ],
+      "inferred": [
+        "路径、地面连续结构优先 Blender Curve / Mesh"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    },
+    {
+      "asset_id": "sky",
+      "name": "蓝色晴天空",
+      "kind": "continuous_environment",
+      "category": "other",
+      "bbox_norm": null,
+      "observed": [
+        "晴朗蓝天",
+        "远方近海平线渐变"
+      ],
+      "inferred": [
+        "使用 World、天空材质和光照"
+      ],
+      "tripo_candidate": false,
+      "views": [
+        "main"
+      ],
+      "instances_estimated": 1,
+      "priority": "medium"
+    }
+  ]
+}
